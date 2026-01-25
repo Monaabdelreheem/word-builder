@@ -35,9 +35,15 @@
 
 // Display letters on the page
 const lettersContainer = document.getElementById("lettersContainer");
+const output = document.getElementById("output");
 lettersData.forEach((item) => {
   const p = document.createElement("p");
   p.textContent = item.letter;
+
+   p.addEventListener("click", () => {
+output.textContent = `${item.letter} is for ${item.word}`;
+  });
+
   lettersContainer.appendChild(p);
 });
 
@@ -45,7 +51,6 @@ lettersData.forEach((item) => {
 // Handle word building logic
 function buildWords() {
   // TODO: generate CVC words based on input
-  const output = document.getElementById("output");
   output.textContent = "Words will appear here.";
 }
 
