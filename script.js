@@ -39,14 +39,14 @@ const output = document.getElementById("output");
 
 function renderLetters() {
 lettersData.forEach((item) => {
-  const p = document.createElement("p");
-  p.textContent = item.letter;
+  const letterEl = document.createElement("p");
+letterEl.textContent = item.letter;
 
-   p.addEventListener("click", () => {
-output.textContent = `${item.letter} is for ${item.word}`;
-  });
+letterEl.addEventListener("click", () => {
+  output.textContent = `${item.letter} is for ${item.word}`;
+});
 
-  lettersContainer.appendChild(p);
+lettersContainer.appendChild(letterEl);
 });
 }
 
