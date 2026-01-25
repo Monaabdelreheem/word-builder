@@ -36,6 +36,8 @@
 // Display letters on the page
 const lettersContainer = document.getElementById("lettersContainer");
 const output = document.getElementById("output");
+
+function renderLetters() {
 lettersData.forEach((item) => {
   const p = document.createElement("p");
   p.textContent = item.letter;
@@ -46,7 +48,9 @@ output.textContent = `${item.letter} is for ${item.word}`;
 
   lettersContainer.appendChild(p);
 });
+}
 
+renderLetters();
 
 // Handle word building logic
 function buildWords() {
