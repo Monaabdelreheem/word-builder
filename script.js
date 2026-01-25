@@ -1,3 +1,4 @@
+ // Data structure for letters and corresponding words
  const lettersData = [
         { letter: "A", word: "apple" },
         { letter: "B", word: "ball" },
@@ -32,8 +33,8 @@
 // console.log(lettersData[0].letter);
 // console.log(lettersData[0].word);
 
+// Display letters on the page
 const lettersContainer = document.getElementById("lettersContainer");
-
 lettersData.forEach((item) => {
   const p = document.createElement("p");
   p.textContent = item.letter;
