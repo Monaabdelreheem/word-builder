@@ -2,23 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Word Builder - Phonics Learning</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Word Builder</h1>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-top">
+          <h1 class="title">Word Builder</h1>
+          <div class="language-selector">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="dari">دری</button>
+            <button class="lang-btn" data-lang="pashto">پشتو</button>
+          </div>
+        </div>
+        <p class="subtitle">Learn phonics one word at a time</p>
+      </div>
+    </div>
+  </header>
 
-   <h2>Letters</h2>
-<div id="lettersContainer"></div>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Section 0: Word of the Day -->
+      <section class="section word-of-day-section">
+        <h2 class="section-title">⭐ Word of the Day</h2>
+        <div class="word-of-day-card">
+          <div class="word-of-day-verb" id="wordOfDayVerb">read</div>
+          <p class="word-of-day-definition" id="wordOfDayDef">to look at and understand words</p>
+          <button id="wordOfDaySpeakBtn" class="btn btn-speak" title="Click to hear the pronunciation">
+            <span class="speak-icon">🔊</span> Hear It
+          </button>
+        </div>
+      </section>
 
+      <!-- Section 1: Letter Explorer -->
+      <section class="section letter-section">
+        <h2 class="section-title">Letter Explorer</h2>
+        <p class="section-description">Click on any letter to learn a word that starts with it</p>
+        <div id="lettersContainer" class="letters-grid"></div>
+      </section>
 
-  <p>Build simple phonics words using letters and word families.</p>
-  <div>
-    <input id="lettersInput" type="text" placeholder="Enter letters (e.g. a d s)">
-    <button id="buildBtn">Build Words</button>
+      <!-- Section 2: Word Families -->
+      <section class="section families-section">
+        <h2 class="section-title">Word Families</h2>
+        <p class="section-description">Explore words that rhyme and share the same pattern</p>
+        <div id="familiesContainer" class="word-families-container"></div>
+      </section>
+
+      <!-- Section 3: Word Builder -->
+      <section class="section builder-section">
+        <h2 class="section-title">Build Your Words</h2>
+        <p class="section-description">Enter letters and watch your words come to life</p>
+        <div class="input-group">
+          <input 
+            id="lettersInput" 
+            type="text" 
+            placeholder="Enter letters (e.g. a d s)" 
+            class="input-field"
+          >
+          <button id="buildBtn" class="btn btn-primary">Build Words</button>
+        </div>
+        <div id="output" class="output-display"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Letter Modal Popup -->
+  <div id="letterModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close">&times;</button>
+      
+      <div class="modal-body">
+        <!-- Image Placeholder -->
+        <div class="modal-image-container">
+          <img id="modalImage" src="" alt="" class="modal-image">
+          <div class="image-placeholder">📸 Image Coming Soon</div>
+        </div>
+
+        <!-- Letter & Words -->
+        <div class="modal-text-container">
+          <div class="modal-letter-display" id="modalLetter">A</div>
+          <div class="modal-word-section">
+            <h3>Word</h3>
+            <p id="modalWord" class="modal-word">apple</p>
+          </div>
+          <button id="speakBtn" class="btn btn-speak" title="Click to hear the pronunciation">
+            <span class="speak-icon">🔊</span> Hear It
+          </button>
+          <button class="btn btn-secondary" onclick="document.getElementById('letterModal').classList.remove('active'); document.getElementById('letterModal').style.display='none'">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div id="output"></div>
 
   <script src="script.js"></script>
 </body>
