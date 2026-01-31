@@ -1,21 +1,21 @@
-// // Translation dictionary
-// const translations = {
-//   en: {
-//     title: "Word Builder",
-//     subtitle: "Learn phonics one word at a time",
-//     wordOfDay: "⭐ Word of the Day",
-//     letterExplorer: "Letters, Sounds, and Examples",
-//     letterDesc: "Click on any letter to learn a word that starts with it",
-//     wordFamilies: "Word Families",
-//     familiesDesc: "Explore words that rhyme and share the same pattern",
-//     buildYourWords: "Build Your Words",
-//     buildDesc: "Enter letters and watch your words come to life",
-//     placeholder: "Enter letters (e.g. a d s)",
-//     buildBtn: "Build Words",
-//     word: "Word",
-//     hearIt: "Hear It",
-//     close: "Close"
-//   },
+// Translation dictionary
+const translations = {
+  en: {
+    title: "Word Builder",
+    subtitle: "Learn phonics one word at a time",
+    wordOfDay: "⭐ Word of the Day",
+    letterExplorer: "Letters, Sounds, and Examples",
+    letterDesc: "Click on any letter to learn a word that starts with it",
+    wordFamilies: "Word Families",
+    familiesDesc: "Explore words that rhyme and share the same pattern",
+    buildYourWords: "Build Your Words",
+    buildDesc: "Enter letters and watch your words come to life",
+    placeholder: "Enter letters (e.g. a d s)",
+    buildBtn: "Build Words",
+    word: "Word",
+    hearIt: "Hear It",
+    close: "Close"
+  },
 //   dari: {
 //     title: "سازنده کلمات",
 //     subtitle: "صدا شناسی را یک کلمه در یک بار یاد بگیرید",
