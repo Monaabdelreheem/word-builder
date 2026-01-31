@@ -51,7 +51,7 @@ const translations = {
   }
 };
 
-// let currentLanguage = 'en';
+let currentLanguage = 'en';
 
  // Data structure for letters and corresponding words
  const lettersData = [
