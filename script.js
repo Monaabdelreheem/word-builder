@@ -53,35 +53,35 @@
 
 // let currentLanguage = 'en';
 
-//  // Data structure for letters and corresponding words
-//  const lettersData = [
-//         { letter: "A", word: "apple" },
-//         { letter: "B", word: "bag" },
-//         { letter: "C", word: "cup" },
-//         { letter: "D", word: "dog" },
-//         { letter: "E", word: "elbow" },
-//         { letter: "F", word: "fan" },
-//         { letter: "G", word: "gate" },
-//         { letter: "H", word: "hat" },
-//         { letter: "I", word: "inch" },
-//         { letter: "J", word: "jacket" },
-//         { letter: "K", word: "kid" },
-//         { letter: "L", word: "lip" },
-//         { letter: "M", word: "man" },
-//         { letter: "N", word: "net" },
-//         { letter: "O", word: "on" },
-//         { letter: "P", word: "pencil" },
-//         { letter: "Q", word: "queen" },
-//         { letter: "R", word: "rug" },
-//         { letter: "S", word: "sun" },
-//         { letter: "T", word: "tree" },
-//         { letter: "U", word: "umbrella" },
-//         { letter: "V", word: "van" },
-//         { letter: "W", word: "woman" },
-//         { letter: "X", word: "exit" },
-//         { letter: "Y", word: "yak" },
-//         { letter: "Z", word: "zipper" }  
-//     ]
+ // Data structure for letters and corresponding words
+ const lettersData = [
+        { letter: "A", word: "apple" },
+        { letter: "B", word: "bag" },
+        { letter: "C", word: "cup" },
+        { letter: "D", word: "dog" },
+        { letter: "E", word: "elbow" },
+        { letter: "F", word: "fan" },
+        { letter: "G", word: "gate" },
+        { letter: "H", word: "hat" },
+        { letter: "I", word: "inch" },
+        { letter: "J", word: "jacket" },
+        { letter: "K", word: "kid" },
+        { letter: "L", word: "lip" },
+        { letter: "M", word: "man" },
+        { letter: "N", word: "net" },
+        { letter: "O", word: "on" },
+        { letter: "P", word: "pencil" },
+        { letter: "Q", word: "queen" },
+        { letter: "R", word: "rug" },
+        { letter: "S", word: "sun" },
+        { letter: "T", word: "tree" },
+        { letter: "U", word: "umbrella" },
+        { letter: "V", word: "van" },
+        { letter: "W", word: "woman" },
+        { letter: "X", word: "exit" },
+        { letter: "Y", word: "yak" },
+        { letter: "Z", word: "zipper" }  
+    ]
 
 // // Action Verbs for Word of the Day
 // const actionVerbs = [
