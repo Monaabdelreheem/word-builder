@@ -32,24 +32,24 @@ const translations = {
     hearIt: "آن را بشنوید",
     close: "بستن"
   },
-//   pashto: {
-//     title: "کلمې جوړونکی",
-//     subtitle: "صوتونه په یو وخت کې یاد کړئ",
-//     wordOfDay: "⭐ د ورځې کلمه",
-//     letterExplorer: "حروف، صدا ، او مثالونه",
-//     letterDesc: "هر حرف کلیک کړئ تر څو د هغې سره سم کلمه یاد کړئ",
-//     wordFamilies: "د کلمو کورنۍ",
-//     familiesDesc: "هغه کلمې کاونده د یکسان نمونو سره",
-//     buildYourWords: "خپل کلمې جوړ کړئ",
-//     buildDesc: "حروف داخل کړئ او خپل کلمې ژوندی کول وګورئ",
-//     placeholder: "حروف داخل کړئ (د بېلګې په توګه: الف د س)",
-//     buildBtn: "کلمې جوړ کړئ",
-//     word: "کلمه",
-//     hearIt: "دا اوریا کړئ",
-//     close: "بندول",
-//     wordOfDay: "⭐ د ورځې کلمه"
-//   }
-// };
+  pashto: {
+    title: "کلمې جوړونکی",
+    subtitle: "صوتونه په یو وخت کې یاد کړئ",
+    wordOfDay: "⭐ د ورځې کلمه",
+    letterExplorer: "حروف، صدا ، او مثالونه",
+    letterDesc: "هر حرف کلیک کړئ تر څو د هغې سره سم کلمه یاد کړئ",
+    wordFamilies: "د کلمو کورنۍ",
+    familiesDesc: "هغه کلمې کاونده د یکسان نمونو سره",
+    buildYourWords: "خپل کلمې جوړ کړئ",
+    buildDesc: "حروف داخل کړئ او خپل کلمې ژوندی کول وګورئ",
+    placeholder: "حروف داخل کړئ (د بېلګې په توګه: الف د س)",
+    buildBtn: "کلمې جوړ کړئ",
+    word: "کلمه",
+    hearIt: "دا اوریا کړئ",
+    close: "بندول",
+    wordOfDay: "⭐ د ورځې کلمه"
+  }
+};
 
 // let currentLanguage = 'en';
 
