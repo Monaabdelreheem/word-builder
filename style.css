@@ -96,7 +96,7 @@ body {
   height: 300px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  animation: drift 8s ease-in-out infinite;
+  animation: drift 7s ease-in-out infinite;
 }
 
 /* @keyframes drift {
