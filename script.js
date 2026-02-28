@@ -189,45 +189,45 @@ speakBtn.addEventListener("click", () => {
   speak(fullText);
 });
 
-// // Function to open modal with letter info
-// function openLetterModal(item) {
-//   modalLetter.textContent = item.letter;
-//   modalWord.textContent = item.word;
-//   modalImage.src = ""; // Clear previous image
-//   modalImage.classList.remove("loaded");
-  
-//   letterModal.classList.add("active");
-//   letterModal.style.display = "flex";
-//   document.body.style.overflow = "hidden"; // Prevent scrolling
-  
-//   // Auto-speak the letter and word
-//   setTimeout(() => {
-//     const letterText = item.letter;
-//     const wordText = item.word;
-//     const fullText = `${letterText} is for ${wordText}`;
-//     speak(fullText);
-//   }, 300);
-// }
+// Function to open modal with letter info
+function openLetterModal(item) {
+  modalLetter.textContent = item.letter;
+  modalWord.textContent = item.word;
+  modalImage.src = ""; // Clear previous image
+  modalImage.classList.remove("loaded");
 
-// // Function to close modal
-// function closeLetterModal() {
-//   letterModal.classList.remove("active");
-//   setTimeout(() => {
-//     letterModal.style.display = "none";
-//   }, 300);
-//   document.body.style.overflow = "auto"; // Re-enable scrolling
-// }
+  letterModal.classList.add("active");
+  letterModal.style.display = "flex";
+  document.body.style.overflow = "hidden"; // Prevent scrolling
 
-// // Close modal when clicking close button or overlay
-// closeModal.addEventListener("click", closeLetterModal);
-// modalOverlay.addEventListener("click", closeLetterModal);
+  // Auto-speak the letter and word
+  setTimeout(() => {
+    const letterText = item.letter;
+    const wordText = item.word;
+    const fullText = `${letterText} is for ${wordText}`;
+    speak(fullText);
+  }, 300);
+}
 
-// // Close modal on Escape key
-// document.addEventListener("keydown", (e) => {
-//   if (e.key === "Escape" && letterModal.classList.contains("active")) {
-//     closeLetterModal();
-//   }
-// });
+// Function to close modal
+function closeLetterModal() {
+  letterModal.classList.remove("active");
+  setTimeout(() => {
+    letterModal.style.display = "none";
+  }, 300);
+  document.body.style.overflow = "auto"; // Re-enable scrolling
+}
+
+// Close modal when clicking close button or overlay
+closeModal.addEventListener("click", closeLetterModal);
+modalOverlay.addEventListener("click", closeLetterModal);
+
+// Close modal on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && letterModal.classList.contains("active")) {
+    closeLetterModal();
+  }
+});
 
 // // Display letters on the page
 // function renderLetters() {
