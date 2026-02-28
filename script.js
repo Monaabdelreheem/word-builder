@@ -245,44 +245,44 @@ function renderLetters() {
 
 renderLetters();
 
-// // Handle word building logic
-// function buildWords() {
-//   const inputValue = document.getElementById("lettersInput").value.trim().toLowerCase();
+// Handle word building logic
+function buildWords() {
+  const inputValue = document.getElementById("lettersInput").value.trim().toLowerCase();
   
-//   if (!inputValue) {
-//     output.innerHTML = `<span style="color: #ff6b6b;">🤔 Please enter some letters first!</span>`;
-//     return;
-//   }
+  if (!inputValue) {
+    output.innerHTML = `<span style="color: #ff6b6b;">🤔 Please enter some letters first!</span>`;
+    return;
+  }
   
-//   // Split input into individual letters
-//   const inputLetters = inputValue.split(/[\s,]+/).filter(letter => letter.length === 1);
+  // Split input into individual letters
+  const inputLetters = inputValue.split(/[\s,]+/).filter(letter => letter.length === 1);
   
-//   if (inputLetters.length === 0) {
-//     output.innerHTML = `<span style="color: #ff6b6b;">❌ Please enter valid letters (a-z)</span>`;
-//     return;
-//   }
+  if (inputLetters.length === 0) {
+    output.innerHTML = `<span style="color: #ff6b6b;">❌ Please enter valid letters (a-z)</span>`;
+    return;
+  }
   
-//   // Get all unique combinations of 3 letters (CVC words)
-//   const generatedWords = generateWords(inputLetters);
+  // Get all unique combinations of 3 letters (CVC words)
+  const generatedWords = generateWords(inputLetters);
   
-//   if (generatedWords.length === 0) {
-//     output.innerHTML = `<span style="color: #ff9500;">⭐ No common words found with these letters.<br/>Try letters like: c, a, t or d, o, g</span>`;
-//     return;
-//   }
+  if (generatedWords.length === 0) {
+    output.innerHTML = `<span style="color: #ff9500;">⭐ No common words found with these letters.<br/>Try letters like: c, a, t or d, o, g</span>`;
+    return;
+  }
   
-//   // Display results
-//   const wordsList = generatedWords.map(w => `<strong>${w}</strong>`).join(", ");
-//   output.innerHTML = `
-//     <div style="text-align: center;">
-//       <div style="font-size: 1.1rem; margin-bottom: 12px; color: #666;">
-//         📝 Words you can make:
-//       </div>
-//       <div style="font-size: 1.3rem; color: var(--primary); line-height: 1.8;">
-//         ${wordsList}
-//       </div>
-//     </div>
-//   `;
-// }
+  // Display results
+  const wordsList = generatedWords.map(w => `<strong>${w}</strong>`).join(", ");
+  output.innerHTML = `
+    <div style="text-align: center;">
+      <div style="font-size: 1.1rem; margin-bottom: 12px; color: #666;">
+        📝 Words you can make:
+      </div>
+      <div style="font-size: 1.3rem; color: var(--primary); line-height: 1.8;">
+        ${wordsList}
+      </div>
+    </div>
+  `;
+}
 
 // Generate words from input letters
 function generateWords(letters) {
@@ -386,21 +386,21 @@ function generateWords(letters) {
   });
 }
 
-// const buildBtn = document.getElementById("buildBtn");
-// const lettersInput = document.getElementById("lettersInput");
+const buildBtn = document.getElementById("buildBtn");
+const lettersInput = document.getElementById("lettersInput");
 
-// if (buildBtn) {
-//   buildBtn.addEventListener("click", buildWords);
-// }
+if (buildBtn) {
+  buildBtn.addEventListener("click", buildWords);
+}
 
-// // Allow Enter key to build words
-// if (lettersInput) {
-//   lettersInput.addEventListener("keypress", (e) => {
-//     if (e.key === "Enter") {
-//       buildWords();
-//     }
-//   });
-// }
+// Allow Enter key to build words
+if (lettersInput) {
+  lettersInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      buildWords();
+    }
+  });
+}
 
 // // Render Word Families
 // function renderWordFamilies() {
