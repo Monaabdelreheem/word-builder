@@ -229,21 +229,21 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// // Display letters on the page
-// function renderLetters() {
-//   lettersData.forEach((item) => {
-//     const letterEl = document.createElement("p");
-//     letterEl.textContent = item.letter;
+// Display letters on the page
+function renderLetters() {
+  lettersData.forEach((item) => {
+    const letterEl = document.createElement("p");
+    letterEl.textContent = item.letter;
 
-//     letterEl.addEventListener("click", () => {
-//       openLetterModal(item);
-//     });
+    letterEl.addEventListener("click", () => {
+      openLetterModal(item);
+    });
 
-//     lettersContainer.appendChild(letterEl);
-//   });
-// }
+    lettersContainer.appendChild(letterEl);
+  });
+}
 
-// renderLetters();
+renderLetters();
 
 // // Handle word building logic
 // function buildWords() {
