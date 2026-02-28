@@ -284,107 +284,107 @@ renderLetters();
 //   `;
 // }
 
-// // Generate words from input letters
-// function generateWords(letters) {
-//   // Comprehensive word list for phonics learning (3, 4, and 5-letter words)
-//   const commonWords = [
-//     // 3-letter words
-//     "ace", "act", "add", "age", "aid", "aim", "air", "all", "and", "ant", "any", "ape", "arc", "are", "ark", "arm", "art", "ash", "ask", "ate",
-//     "bad", "bag", "ban", "bar", "bat", "bay", "bed", "bee", "bet", "bid", "big", "bin", "bit", "boa", "bog", "bow", "box", "boy", "bud", "bug", "bus", "but", "buy",
-//     "cab", "can", "cap", "car", "cat", "cot", "cow", "cry", "cub", "cup", "cut",
-//     "dab", "dad", "dam", "day", "den", "did", "die", "dig", "dim", "dip", "dog", "dot", "dry", "dug",
-//     "ear", "eat", "egg", "end", "eye",
-//     "fan", "far", "fat", "fed", "fee", "few", "fig", "fin", "fit", "fix", "fly", "fog", "for", "fox", "fun", "fur",
-//     "gap", "gas", "gay", "get", "god", "got", "gum", "gun", "gut", "guy",
-//     "had", "ham", "has", "hat", "hay", "hem", "hen", "her", "hid", "him", "hip", "his", "hit", "hog", "hop", "hot", "how", "hub", "hug", "hum", "hut",
-//     "ice", "ill", "ink", "inn", "ion", "ire", "its",
-//     "jab", "jam", "jar", "jay", "jet", "jig", "job", "jog", "joy", "jug",
-//     "key", "kid", "kin",
-//     "lab", "lad", "lag", "lap", "law", "lay", "led", "leg", "let", "lid", "lie", "lip", "lit", "log", "lot", "low",
-//     "mad", "man", "map", "mat", "may", "men", "met", "mix", "mob", "mom", "mop", "mud", "mug",
-//     "nap", "net", "new", "nod", "nor", "not", "now", "nut",
-//     "oak", "oat", "odd", "off", "oil", "old", "one", "our", "out", "owe", "owl", "own",
-//     "pad", "pal", "pan", "pat", "paw", "pay", "peg", "pen", "pet", "pig", "pin", "pit", "pot", "put",
-//     "rad", "ran", "rat", "raw", "ray", "red", "rev", "rib", "rid", "rig", "rim", "rob", "rod", "rot", "row", "rub", "rug", "run", "rut",
-//     "sad", "sat", "saw", "say", "sea", "set", "she", "sit", "six", "sky", "sly", "sob", "son", "sun",
-//     "tab", "tag", "tan", "tap", "tar", "tax", "tea", "ten", "the", "tie", "tin", "tip", "toe", "ton", "too", "top", "toy", "try", "tub", "tug", "two",
-//     "use",
-//     "van", "vat", "via", "vie",
-//     "wad", "wag", "war", "was", "wax", "way", "web", "wed", "wet", "who", "why", "wig", "win", "wit", "won",
-//     "yak", "yes", "yet", "you",
-//     "zoo", "zip",
+// Generate words from input letters
+function generateWords(letters) {
+  // Comprehensive word list for phonics learning (3, 4, and 5-letter words)
+  const commonWords = [
+    // 3-letter words
+    "ace", "act", "add", "age", "aid", "aim", "air", "all", "and", "ant", "any", "ape", "arc", "are", "ark", "arm", "art", "ash", "ask", "ate",
+    "bad", "bag", "ban", "bar", "bat", "bay", "bed", "bee", "bet", "bid", "big", "bin", "bit", "boa", "bog", "bow", "box", "boy", "bud", "bug", "bus", "but", "buy",
+    "cab", "can", "cap", "car", "cat", "cot", "cow", "cry", "cub", "cup", "cut",
+    "dab", "dad", "dam", "day", "den", "did", "die", "dig", "dim", "dip", "dog", "dot", "dry", "dug",
+    "ear", "eat", "egg", "end", "eye",
+    "fan", "far", "fat", "fed", "fee", "few", "fig", "fin", "fit", "fix", "fly", "fog", "for", "fox", "fun", "fur",
+    "gap", "gas", "gay", "get", "god", "got", "gum", "gun", "gut", "guy",
+    "had", "ham", "has", "hat", "hay", "hem", "hen", "her", "hid", "him", "hip", "his", "hit", "hog", "hop", "hot", "how", "hub", "hug", "hum", "hut",
+    "ice", "ill", "ink", "inn", "ion", "ire", "its",
+    "jab", "jam", "jar", "jay", "jet", "jig", "job", "jog", "joy", "jug",
+    "key", "kid", "kin",
+    "lab", "lad", "lag", "lap", "law", "lay", "led", "leg", "let", "lid", "lie", "lip", "lit", "log", "lot", "low",
+    "mad", "man", "map", "mat", "may", "men", "met", "mix", "mob", "mom", "mop", "mud", "mug",
+    "nap", "net", "new", "nod", "nor", "not", "now", "nut",
+    "oak", "oat", "odd", "off", "oil", "old", "one", "our", "out", "owe", "owl", "own",
+    "pad", "pal", "pan", "pat", "paw", "pay", "peg", "pen", "pet", "pig", "pin", "pit", "pot", "put",
+    "rad", "ran", "rat", "raw", "ray", "red", "rev", "rib", "rid", "rig", "rim", "rob", "rod", "rot", "row", "rub", "rug", "run", "rut",
+    "sad", "sat", "saw", "say", "sea", "set", "she", "sit", "six", "sky", "sly", "sob", "son", "sun",
+    "tab", "tag", "tan", "tap", "tar", "tax", "tea", "ten", "the", "tie", "tin", "tip", "toe", "ton", "too", "top", "toy", "try", "tub", "tug", "two",
+    "use",
+    "van", "vat", "via", "vie",
+    "wad", "wag", "war", "was", "wax", "way", "web", "wed", "wet", "who", "why", "wig", "win", "wit", "won",
+    "yak", "yes", "yet", "you",
+    "zoo", "zip",
     
-//     // 4-letter words
-//     "able", "acid", "aged", "aide", "area", "army",
-//     "baby", "back", "bake", "ball", "band", "bare", "bark", "base", "bear", "beat", "bird", "bite", "blow", "blue", "boat", "body", "bone", "book", "born", "bowl",
-//     "cage", "cake", "came", "camp", "card", "care", "case", "cave", "code", "cold", "come", "cone", "cool", "core",
-//     "dare", "dark", "date", "dead", "dear", "demo", "desk", "dial", "dice", "died", "dire", "dirt", "dive", "dock", "dome", "done", "door",
-//     "each", "earn", "ease", "easy", "edge",
-//     "face", "fact", "fair", "fall", "farm", "fast", "fear", "feel", "feet", "fell", "felt", "file", "fill", "film", "find", "fine", "fire", "firm", "fish", "five", "flag", "flat", "flow", "folk", "food", "fool", "foot", "fork", "form", "fort", "four", "free", "from", "fuel", "full",
-//     "game", "gate", "gave", "gear", "gift", "girl", "give", "glad", "goal", "goat", "gold", "gone", "good", "gray", "grew", "grey", "grip", "grow",
-//     "hair", "half", "hall", "hand", "hang", "hard", "hare", "hate", "have", "head", "hear", "heat", "held", "help", "here", "hero", "hide", "high", "hill", "hint", "hire", "hold", "hole", "home", "hook", "horn", "hose", "hour", "huge", "hung",
-//     "idea", "idle",
-//     "jade", "jail", "joke", "jump",
-//     "keep", "kept", "kick", "kill", "kind", "king", "knew",
-//     "lack", "lady", "laid", "lake", "land", "lane", "late", "lead", "leaf", "lean", "left", "lend", "life", "lift", "like", "line", "link", "live", "load", "loaf", "lock", "long", "look", "lord", "lose", "loss", "loud", "love", "luck",
-//     "made", "mail", "main", "make", "male", "mark", "mask", "mass", "mate", "math", "maze", "mean", "meat", "meet", "menu", "mess", "mice", "mile", "milk", "mind", "mine", "miss", "mode", "mood", "moon", "more", "most", "move", "much", "must",
-//     "name", "near", "neat", "neck", "need", "nest", "next", "nice", "nine", "node", "none", "noon", "nose", "note",
-//     "pace", "pack", "page", "pain", "pair", "pale", "palm", "park", "part", "pass", "past", "path", "peak", "pear", "peel", "peer", "pink", "plan", "play", "poet", "pole", "pond", "pool", "poor", "pork", "port", "pray", "prey", "pull", "pure",
-//     "race", "rack", "rage", "raid", "rail", "rain", "rake", "rang", "rank", "rare", "rate", "read", "real", "reap", "rear", "rice", "rich", "ride", "ring", "rise", "risk", "road", "roam", "roar", "robe", "rock", "role", "roll", "roof", "room", "rope", "rose", "rule", "rush",
-//     "safe", "sage", "said", "sail", "sake", "sale", "salt", "same", "sand", "save", "seal", "seam", "seat", "seed", "seem", "sell", "send", "sent", "ship", "shop", "shot", "show", "shut", "sick", "side", "sign", "silk", "sing", "sink", "site", "size", "skin", "slip", "slow", "snap", "snow", "soap", "sock", "soft", "soil", "sold", "sole", "some", "song", "soon", "sort", "soul", "spot", "star", "stay", "stem", "step", "stop", "such", "suit", "sure", "swim",
-//     "take", "tale", "talk", "tall", "tank", "tape", "task", "team", "tear", "tell", "tend", "tent", "term", "test", "than", "that", "them", "then", "they", "thin", "this", "thus", "tide", "tied", "tile", "time", "tire", "toad", "told", "tone", "took", "tool", "town", "trap", "tray", "tree", "trek", "trip", "true", "tube", "tune", "turn", "twin", "type",
-//     "unit", "used",
-//     "vain", "vale", "veil", "vein", "verb", "very", "vice", "view", "vine",
-//     "wade", "wage", "wait", "wake", "walk", "wall", "want", "warm", "warn", "wash", "wave", "weak", "wear", "week", "well", "went", "were", "west", "what", "when", "wide", "wife", "wild", "will", "wind", "wine", "wing", "wire", "wise", "wish", "with", "wolf", "wood", "wool", "word", "wore", "work", "worn",
-//     "yell", "your",
+    // 4-letter words
+    "able", "acid", "aged", "aide", "area", "army",
+    "baby", "back", "bake", "ball", "band", "bare", "bark", "base", "bear", "beat", "bird", "bite", "blow", "blue", "boat", "body", "bone", "book", "born", "bowl",
+    "cage", "cake", "came", "camp", "card", "care", "case", "cave", "code", "cold", "come", "cone", "cool", "core",
+    "dare", "dark", "date", "dead", "dear", "demo", "desk", "dial", "dice", "died", "dire", "dirt", "dive", "dock", "dome", "done", "door",
+    "each", "earn", "ease", "easy", "edge",
+    "face", "fact", "fair", "fall", "farm", "fast", "fear", "feel", "feet", "fell", "felt", "file", "fill", "film", "find", "fine", "fire", "firm", "fish", "five", "flag", "flat", "flow", "folk", "food", "fool", "foot", "fork", "form", "fort", "four", "free", "from", "fuel", "full",
+    "game", "gate", "gave", "gear", "gift", "girl", "give", "glad", "goal", "goat", "gold", "gone", "good", "gray", "grew", "grey", "grip", "grow",
+    "hair", "half", "hall", "hand", "hang", "hard", "hare", "hate", "have", "head", "hear", "heat", "held", "help", "here", "hero", "hide", "high", "hill", "hint", "hire", "hold", "hole", "home", "hook", "horn", "hose", "hour", "huge", "hung",
+    "idea", "idle",
+    "jade", "jail", "joke", "jump",
+    "keep", "kept", "kick", "kill", "kind", "king", "knew",
+    "lack", "lady", "laid", "lake", "land", "lane", "late", "lead", "leaf", "lean", "left", "lend", "life", "lift", "like", "line", "link", "live", "load", "loaf", "lock", "long", "look", "lord", "lose", "loss", "loud", "love", "luck",
+    "made", "mail", "main", "make", "male", "mark", "mask", "mass", "mate", "math", "maze", "mean", "meat", "meet", "menu", "mess", "mice", "mile", "milk", "mind", "mine", "miss", "mode", "mood", "moon", "more", "most", "move", "much", "must",
+    "name", "near", "neat", "neck", "need", "nest", "next", "nice", "nine", "node", "none", "noon", "nose", "note",
+    "pace", "pack", "page", "pain", "pair", "pale", "palm", "park", "part", "pass", "past", "path", "peak", "pear", "peel", "peer", "pink", "plan", "play", "poet", "pole", "pond", "pool", "poor", "pork", "port", "pray", "prey", "pull", "pure",
+    "race", "rack", "rage", "raid", "rail", "rain", "rake", "rang", "rank", "rare", "rate", "read", "real", "reap", "rear", "rice", "rich", "ride", "ring", "rise", "risk", "road", "roam", "roar", "robe", "rock", "role", "roll", "roof", "room", "rope", "rose", "rule", "rush",
+    "safe", "sage", "said", "sail", "sake", "sale", "salt", "same", "sand", "save", "seal", "seam", "seat", "seed", "seem", "sell", "send", "sent", "ship", "shop", "shot", "show", "shut", "sick", "side", "sign", "silk", "sing", "sink", "site", "size", "skin", "slip", "slow", "snap", "snow", "soap", "sock", "soft", "soil", "sold", "sole", "some", "song", "soon", "sort", "soul", "spot", "star", "stay", "stem", "step", "stop", "such", "suit", "sure", "swim",
+    "take", "tale", "talk", "tall", "tank", "tape", "task", "team", "tear", "tell", "tend", "tent", "term", "test", "than", "that", "them", "then", "they", "thin", "this", "thus", "tide", "tied", "tile", "time", "tire", "toad", "told", "tone", "took", "tool", "town", "trap", "tray", "tree", "trek", "trip", "true", "tube", "tune", "turn", "twin", "type",
+    "unit", "used",
+    "vain", "vale", "veil", "vein", "verb", "very", "vice", "view", "vine",
+    "wade", "wage", "wait", "wake", "walk", "wall", "want", "warm", "warn", "wash", "wave", "weak", "wear", "week", "well", "went", "were", "west", "what", "when", "wide", "wife", "wild", "will", "wind", "wine", "wing", "wire", "wise", "wish", "with", "wolf", "wood", "wool", "word", "wore", "work", "worn",
+    "yell", "your",
     
-//     // 5-letter words
-//     "about", "abuse", "admit", "adopt", "adult", "after", "again", "agree", "ahead", "alarm", "alien", "alike", "alive", "allow", "alone", "along", "amber", "amuse", "angel", "anger", "angry", "aside", "audio",
-//     "beach", "beard", "beast", "began", "begin", "being", "below", "bench", "billy", "birth", "black", "blade", "blame", "blank", "blind", "block", "blood", "board", "boost", "booth", "brain", "brake", "brand", "brave", "bread", "break", "breed", "brick", "bride", "bring", "broad", "broke", "brown", "build",
-//     "cable", "camel", "canal", "candy", "canoe", "can't", "cargo", "catch", "cause", "chain", "chair", "chalk", "champ", "chart", "chase", "cheap", "cheat", "check", "cheek", "cheer", "chest", "chief", "child", "chill", "china", "chose", "chunk", "claim", "class", "clean", "clear", "click", "cliff", "climb", "close", "cloth", "cloud", "coach", "coast", "could", "count", "court", "cover", "crack", "craft", "crane", "crash", "crazy", "cream", "creek", "crime", "crisp", "cross", "crowd", "crown", "curve", "cycle",
-//     "daily", "dairy", "dance", "dealt", "death", "debut", "depth", "devil", "diary", "diner", "dirty", "dodge", "doing", "doubt", "dough", "draft", "drain", "drama", "drank", "dread", "dream", "dress", "dried", "drier", "drill", "drink", "drive", "drown", "dwell",
-//     "eager", "eagle", "early", "earth", "eight", "elbow", "elder", "empty", "enemy", "enjoy", "enter", "entry", "equal", "erase", "error", "ethic", "event", "every", "exact", "exist", "extra",
-//     "fable", "faced", "faded", "faith", "false", "fancy", "fatal", "fault", "favor", "feast", "fence", "fiber", "field", "fiery", "fifth", "fifty", "fight", "filed", "final", "finch", "fined", "fired", "first", "fixed", "flame", "flank", "flash", "fleet", "flesh", "flick", "flier", "flight", "fling", "float", "flood", "floor", "flour", "flown", "fluid", "flute", "focal", "focus", "foggy", "force", "forge", "forth", "forty", "forum", "found", "frame", "frank", "fraud", "freak", "freed", "fresh", "fried", "frock", "front", "frost", "frown", "froze", "fruit", "fully", "funny", "furry",
-//     "gaily", "gamer", "gauge", "giant", "giddy", "glass", "glaze", "gleam", "glide", "glint", "globe", "gloom", "glory", "glove", "grace", "grade", "grain", "grand", "grant", "grape", "graph", "grasp", "grass", "grate", "grave", "graze", "great", "greed", "green", "greet", "grief", "grill", "grime", "grind", "groan", "groom", "grope", "gross", "group", "grove", "grown", "guard", "guess", "guest", "guide", "guild", "guilt", "guise",
-//     "habit", "happy", "harsh", "haste", "hasty", "hatch", "haunt", "haven", "havoc", "hazel", "head", "heard", "heart", "heath", "heavy", "hedge", "hefty", "height", "heirs", "hello", "helps", "hence", "herbs", "herds", "heron", "hinge", "hints", "hippo", "hired", "hitch", "hoard", "hobby", "hoist", "holds", "holes", "holly", "homes", "honey", "honor", "hoods", "hooks", "hoops", "hoped", "horde", "horns", "horse", "hoses", "hotel", "hound", "hours", "house", "hovel", "hover", "howls", "human", "humid", "humor", "hunks", "hunts", "hurls", "hurry", "hurts", "husks",
-//     "ideal", "ideas", "image", "imply", "index", "inner", "input", "irons", "irony", "issue",
-//     "jeans", "jelly", "jetty", "jewel", "jiffy", "joked", "joker", "jokes", "jolly", "joust", "judge", "juice", "juicy", "jumbo", "jumps", "jumpy", "junco", "junky",
-//     "kayak", "keeps", "ketch", "kicks", "killed", "killer", "kinds", "kings", "kinks", "kites", "kitty", "knead", "kneel", "knelt", "knife", "knock", "knots", "known", "knows",
-//     "label", "labor", "laced", "laden", "ladle", "lakes", "lamps", "lands", "lanes", "lapse", "larch", "lards", "large", "larks", "laser", "lasso", "latch", "latex", "later", "lathe", "laugh", "lawns", "layer", "lazar", "lazed", "lazy", "leads", "leafy", "leaks", "leaky", "leans", "leant", "leaps", "leapt", "learn", "lease", "leash", "least", "leave", "ledge", "leeks", "leers", "legal", "lemon", "lemur", "lends", "lense", "lent", "level", "lever", "lewis", "libel", "lice", "licks", "lifts", "light", "liked", "liken", "likes", "lilac", "limbs", "limes", "limit", "lined", "linen", "liner", "lines", "lingo", "links", "lions", "lipid", "liquid", "lists", "lithe", "litter", "lived", "lively", "liver", "lives", "livid", "loads", "loafs", "loams", "loamy", "loans", "loath", "loath", "lobby", "lobed", "lobes", "local", "locks", "locus", "lofts", "lofty", "logan", "logic", "loins", "loner", "longs", "looks", "looms", "loons", "loops", "loose", "loped", "lopes", "lords", "lores", "loser", "loses", "lossy", "lotus", "louds", "lough", "louis", "louse", "lousy", "louts", "loved", "lover", "loves", "lower", "lowly", "loyal", "lowed", "lucid", "lucky", "lucre", "lumps", "lumpy", "lunar", "lunch", "lunge", "lungs", "lurks", "lusty", "lutes", "lying", "lymph", "lynch", "lyre", "lyric",
-//     "macho", "macro", "madam", "madly", "magic", "magma", "mails", "maims", "mains", "major", "maker", "makes", "males", "malts", "mamma", "mammy", "mango", "manly", "manor", "maple", "march", "mares", "marge", "marks", "marsh", "mason", "masts", "match", "mated", "mates", "maths", "matey", "matte", "mauls", "maxim", "maybe", "mayor", "mazed", "mazes", "meads", "meals", "mealy", "meant", "meats", "meaty", "medal", "media", "medic", "meets", "melds", "melon", "melts", "memos", "mends", "menus", "mercy", "merge", "merit", "merry", "mesas", "meshy", "messy", "metal", "meter", "metro", "micro", "midst", "might", "milks", "milky", "mills", "mimed", "mimes", "mimic", "mince", "minds", "mined", "miner", "mines", "minty", "minus", "mired", "mires", "mirth", "misty", "mites", "mixed", "mixer", "mixes", "moans", "moats", "mocks", "model", "modem", "modes", "mogul", "moist", "molar", "molds", "moldy", "moles", "molts", "mommy", "momma", "mondo", "money", "monks", "month", "mooch", "moods", "moody", "moofs", "mooks", "moola", "moons", "moony", "moors", "moose", "moped", "mopes", "moral", "morph", "morph", "morse", "mossy", "mostly", "motel", "moths", "motif", "motor", "motto", "mould", "moult", "mound", "mound", "mount", "mourn", "mouse", "mousy", "mouth", "moved", "mover", "moves", "movie", "mowed", "mower", "mucus", "muddy", "mufti", "muggy", "mulch", "mummy", "mumps", "munch", "mural", "murky", "musks", "musty", "muted", "mutes", "myths"
-//   ];
+    // 5-letter words
+    "about", "abuse", "admit", "adopt", "adult", "after", "again", "agree", "ahead", "alarm", "alien", "alike", "alive", "allow", "alone", "along", "amber", "amuse", "angel", "anger", "angry", "aside", "audio",
+    "beach", "beard", "beast", "began", "begin", "being", "below", "bench", "billy", "birth", "black", "blade", "blame", "blank", "blind", "block", "blood", "board", "boost", "booth", "brain", "brake", "brand", "brave", "bread", "break", "breed", "brick", "bride", "bring", "broad", "broke", "brown", "build",
+    "cable", "camel", "canal", "candy", "canoe", "can't", "cargo", "catch", "cause", "chain", "chair", "chalk", "champ", "chart", "chase", "cheap", "cheat", "check", "cheek", "cheer", "chest", "chief", "child", "chill", "china", "chose", "chunk", "claim", "class", "clean", "clear", "click", "cliff", "climb", "close", "cloth", "cloud", "coach", "coast", "could", "count", "court", "cover", "crack", "craft", "crane", "crash", "crazy", "cream", "creek", "crime", "crisp", "cross", "crowd", "crown", "curve", "cycle",
+    "daily", "dairy", "dance", "dealt", "death", "debut", "depth", "devil", "diary", "diner", "dirty", "dodge", "doing", "doubt", "dough", "draft", "drain", "drama", "drank", "dread", "dream", "dress", "dried", "drier", "drill", "drink", "drive", "drown", "dwell",
+    "eager", "eagle", "early", "earth", "eight", "elbow", "elder", "empty", "enemy", "enjoy", "enter", "entry", "equal", "erase", "error", "ethic", "event", "every", "exact", "exist", "extra",
+    "fable", "faced", "faded", "faith", "false", "fancy", "fatal", "fault", "favor", "feast", "fence", "fiber", "field", "fiery", "fifth", "fifty", "fight", "filed", "final", "finch", "fined", "fired", "first", "fixed", "flame", "flank", "flash", "fleet", "flesh", "flick", "flier", "flight", "fling", "float", "flood", "floor", "flour", "flown", "fluid", "flute", "focal", "focus", "foggy", "force", "forge", "forth", "forty", "forum", "found", "frame", "frank", "fraud", "freak", "freed", "fresh", "fried", "frock", "front", "frost", "frown", "froze", "fruit", "fully", "funny", "furry",
+    "gaily", "gamer", "gauge", "giant", "giddy", "glass", "glaze", "gleam", "glide", "glint", "globe", "gloom", "glory", "glove", "grace", "grade", "grain", "grand", "grant", "grape", "graph", "grasp", "grass", "grate", "grave", "graze", "great", "greed", "green", "greet", "grief", "grill", "grime", "grind", "groan", "groom", "grope", "gross", "group", "grove", "grown", "guard", "guess", "guest", "guide", "guild", "guilt", "guise",
+    "habit", "happy", "harsh", "haste", "hasty", "hatch", "haunt", "haven", "havoc", "hazel", "head", "heard", "heart", "heath", "heavy", "hedge", "hefty", "height", "heirs", "hello", "helps", "hence", "herbs", "herds", "heron", "hinge", "hints", "hippo", "hired", "hitch", "hoard", "hobby", "hoist", "holds", "holes", "holly", "homes", "honey", "honor", "hoods", "hooks", "hoops", "hoped", "horde", "horns", "horse", "hoses", "hotel", "hound", "hours", "house", "hovel", "hover", "howls", "human", "humid", "humor", "hunks", "hunts", "hurls", "hurry", "hurts", "husks",
+    "ideal", "ideas", "image", "imply", "index", "inner", "input", "irons", "irony", "issue",
+    "jeans", "jelly", "jetty", "jewel", "jiffy", "joked", "joker", "jokes", "jolly", "joust", "judge", "juice", "juicy", "jumbo", "jumps", "jumpy", "junco", "junky",
+    "kayak", "keeps", "ketch", "kicks", "killed", "killer", "kinds", "kings", "kinks", "kites", "kitty", "knead", "kneel", "knelt", "knife", "knock", "knots", "known", "knows",
+    "label", "labor", "laced", "laden", "ladle", "lakes", "lamps", "lands", "lanes", "lapse", "larch", "lards", "large", "larks", "laser", "lasso", "latch", "latex", "later", "lathe", "laugh", "lawns", "layer", "lazar", "lazed", "lazy", "leads", "leafy", "leaks", "leaky", "leans", "leant", "leaps", "leapt", "learn", "lease", "leash", "least", "leave", "ledge", "leeks", "leers", "legal", "lemon", "lemur", "lends", "lense", "lent", "level", "lever", "lewis", "libel", "lice", "licks", "lifts", "light", "liked", "liken", "likes", "lilac", "limbs", "limes", "limit", "lined", "linen", "liner", "lines", "lingo", "links", "lions", "lipid", "liquid", "lists", "lithe", "litter", "lived", "lively", "liver", "lives", "livid", "loads", "loafs", "loams", "loamy", "loans", "loath", "loath", "lobby", "lobed", "lobes", "local", "locks", "locus", "lofts", "lofty", "logan", "logic", "loins", "loner", "longs", "looks", "looms", "loons", "loops", "loose", "loped", "lopes", "lords", "lores", "loser", "loses", "lossy", "lotus", "louds", "lough", "louis", "louse", "lousy", "louts", "loved", "lover", "loves", "lower", "lowly", "loyal", "lowed", "lucid", "lucky", "lucre", "lumps", "lumpy", "lunar", "lunch", "lunge", "lungs", "lurks", "lusty", "lutes", "lying", "lymph", "lynch", "lyre", "lyric",
+    "macho", "macro", "madam", "madly", "magic", "magma", "mails", "maims", "mains", "major", "maker", "makes", "males", "malts", "mamma", "mammy", "mango", "manly", "manor", "maple", "march", "mares", "marge", "marks", "marsh", "mason", "masts", "match", "mated", "mates", "maths", "matey", "matte", "mauls", "maxim", "maybe", "mayor", "mazed", "mazes", "meads", "meals", "mealy", "meant", "meats", "meaty", "medal", "media", "medic", "meets", "melds", "melon", "melts", "memos", "mends", "menus", "mercy", "merge", "merit", "merry", "mesas", "meshy", "messy", "metal", "meter", "metro", "micro", "midst", "might", "milks", "milky", "mills", "mimed", "mimes", "mimic", "mince", "minds", "mined", "miner", "mines", "minty", "minus", "mired", "mires", "mirth", "misty", "mites", "mixed", "mixer", "mixes", "moans", "moats", "mocks", "model", "modem", "modes", "mogul", "moist", "molar", "molds", "moldy", "moles", "molts", "mommy", "momma", "mondo", "money", "monks", "month", "mooch", "moods", "moody", "moofs", "mooks", "moola", "moons", "moony", "moors", "moose", "moped", "mopes", "moral", "morph", "morph", "morse", "mossy", "mostly", "motel", "moths", "motif", "motor", "motto", "mould", "moult", "mound", "mound", "mount", "mourn", "mouse", "mousy", "mouth", "moved", "mover", "moves", "movie", "mowed", "mower", "mucus", "muddy", "mufti", "muggy", "mulch", "mummy", "mumps", "munch", "mural", "murky", "musks", "musty", "muted", "mutes", "myths"
+  ];
   
-//   // Count available letters
-//   const letterCounts = {};
-//   letters.forEach(letter => {
-//     letterCounts[letter] = (letterCounts[letter] || 0) + 1;
-//   });
+  // Count available letters
+  const letterCounts = {};
+  letters.forEach(letter => {
+    letterCounts[letter] = (letterCounts[letter] || 0) + 1;
+  });
   
-//   // Filter words that can be made from the input letters (no repeated letters beyond what's available)
-//   const availableWords = commonWords.filter(word => {
-//     const wordLetters = word.split("");
-//     const wordCounts = {};
+  // Filter words that can be made from the input letters (no repeated letters beyond what's available)
+  const availableWords = commonWords.filter(word => {
+    const wordLetters = word.split("");
+    const wordCounts = {};
     
-//     // Count letters in the word
-//     wordLetters.forEach(letter => {
-//       wordCounts[letter] = (wordCounts[letter] || 0) + 1;
-//     });
+    // Count letters in the word
+    wordLetters.forEach(letter => {
+      wordCounts[letter] = (wordCounts[letter] || 0) + 1;
+    });
     
-//     // Check if we have enough of each letter
-//     return Object.keys(wordCounts).every(letter => 
-//       letterCounts[letter] && letterCounts[letter] >= wordCounts[letter]
-//     );
-//   });
+    // Check if we have enough of each letter
+    return Object.keys(wordCounts).every(letter => 
+      letterCounts[letter] && letterCounts[letter] >= wordCounts[letter]
+    );
+  });
   
-//   // Return unique words, sorted by length first (3-letter, 4-letter, 5-letter, etc.), then alphabetically
-//   const uniqueWords = [...new Set(availableWords)];
-//   return uniqueWords.sort((a, b) => {
-//     if (a.length !== b.length) {
-//       return a.length - b.length; // Sort by length first
-//     }
-//     return a.localeCompare(b); // Then alphabetically within same length
-//   });
-// }
+  // Return unique words, sorted by length first (3-letter, 4-letter, 5-letter, etc.), then alphabetically
+  const uniqueWords = [...new Set(availableWords)];
+  return uniqueWords.sort((a, b) => {
+    if (a.length !== b.length) {
+      return a.length - b.length; // Sort by length first
+    }
+    return a.localeCompare(b); // Then alphabetically within same length
+  });
+}
 
 // const buildBtn = document.getElementById("buildBtn");
 // const lettersInput = document.getElementById("lettersInput");
