@@ -127,30 +127,30 @@ const modalWord = document.getElementById("modalWord");
 const modalImage = document.getElementById("modalImage");
 const speakBtn = document.getElementById("speakBtn");
 
-// // Word Families Data - 3 to 4 letter words only
-// const wordFamilies = [
-//   { ending: "at", words: ["bat", "cat", "fat", "hat", "mat", "pat", "rat", "sat", "vat", "tat", "chat", "flat", "that", "what", "brat", "gnat", "scat", "stat"] },
-//   { ending: "an", words: ["ban", "can", "fan", "man", "pan", "ran", "tan", "van", "clan", "plan", "scan", "span"] },
-//   { ending: "it", words: ["bit", "fit", "hit", "kit", "lit", "pit", "sit", "wit", "nit", "grit", "quit", "skit"] },
-//   { ending: "et", words: ["bet", "get", "jet", "let", "met", "net", "pet", "set", "vet", "wet", "yet"] },
-//   { ending: "ig", words: ["big", "dig", "fig", "gig", "jig", "pig", "rig", "wig", "twig"] },
-//   { ending: "ot", words: ["bot", "cot", "dot", "got", "hot", "jot", "lot", "not", "pot", "rot", "shot", "spot", "plot", "slot"] },
-//   { ending: "un", words: ["bun", "fun", "gun", "nun", "pun", "run", "sun", "stun"] },
-//   { ending: "ed", words: ["bed", "fed", "led", "red", "ted", "wed", "shed", "sled", "fled"] },
-//   { ending: "en", words: ["ben", "den", "hen", "ken", "men", "pen", "ten", "yen", "zen", "when", "then"] },
-//   { ending: "in", words: ["bin", "din", "fin", "gin", "kin", "pin", "sin", "tin", "win", "chin", "skin", "spin"] },
-//   { ending: "og", words: ["bog", "cog", "dog", "fog", "hog", "jog", "log", "frog"] },
-//   { ending: "ack", words: ["back", "hack", "jack", "lack", "pack", "rack", "sack", "tack"] },
-//   { ending: "ick", words: ["kick", "lick", "nick", "pick", "sick", "tick", "wick"] },
-//   { ending: "uck", words: ["buck", "duck", "luck", "muck", "puck", "suck", "tuck"] },
-//   { ending: "and", words: ["band", "hand", "land", "sand"] },
-//   { ending: "end", words: ["bend", "fend", "lend", "mend", "rend", "send", "tend"] },
-//   { ending: "ung", words: ["bung", "dung", "hung", "lung", "rung", "sung"] },
-//   { ending: "ing", words: ["king", "ping", "ring", "sing", "ting", "wing"] },
-//   { ending: "ank", words: ["bank", "dank", "hank", "rank", "tank", "yank"] },
-//   { ending: "ell", words: ["bell", "cell", "dell", "fell", "hell", "jell", "sell", "tell", "well", "yell"] },
-//   { ending: "all", words: ["ball", "call", "fall", "gall", "hall", "mall", "tall", "wall"] },
-// ];
+// Word Families Data - 3 to 4 letter words only
+const wordFamilies = [
+  { ending: "at", words: ["bat", "cat", "fat", "hat", "mat", "pat", "rat", "sat", "vat", "tat", "chat", "flat", "that", "what", "brat", "gnat", "scat", "stat"] },
+  { ending: "an", words: ["ban", "can", "fan", "man", "pan", "ran", "tan", "van", "clan", "plan", "scan", "span"] },
+  { ending: "it", words: ["bit", "fit", "hit", "kit", "lit", "pit", "sit", "wit", "nit", "grit", "quit", "skit"] },
+  { ending: "et", words: ["bet", "get", "jet", "let", "met", "net", "pet", "set", "vet", "wet", "yet"] },
+  { ending: "ig", words: ["big", "dig", "fig", "gig", "jig", "pig", "rig", "wig", "twig"] },
+  { ending: "ot", words: ["bot", "cot", "dot", "got", "hot", "jot", "lot", "not", "pot", "rot", "shot", "spot", "plot", "slot"] },
+  { ending: "un", words: ["bun", "fun", "gun", "nun", "pun", "run", "sun", "stun"] },
+  { ending: "ed", words: ["bed", "fed", "led", "red", "ted", "wed", "shed", "sled", "fled"] },
+  { ending: "en", words: ["ben", "den", "hen", "ken", "men", "pen", "ten", "yen", "zen", "when", "then"] },
+  { ending: "in", words: ["bin", "din", "fin", "gin", "kin", "pin", "sin", "tin", "win", "chin", "skin", "spin"] },
+  { ending: "og", words: ["bog", "cog", "dog", "fog", "hog", "jog", "log", "frog"] },
+  { ending: "ack", words: ["back", "hack", "jack", "lack", "pack", "rack", "sack", "tack"] },
+  { ending: "ick", words: ["kick", "lick", "nick", "pick", "sick", "tick", "wick"] },
+  { ending: "uck", words: ["buck", "duck", "luck", "muck", "puck", "suck", "tuck"] },
+  { ending: "and", words: ["band", "hand", "land", "sand"] },
+  { ending: "end", words: ["bend", "fend", "lend", "mend", "rend", "send", "tend"] },
+  { ending: "ung", words: ["bung", "dung", "hung", "lung", "rung", "sung"] },
+  { ending: "ing", words: ["king", "ping", "ring", "sing", "ting", "wing"] },
+  { ending: "ank", words: ["bank", "dank", "hank", "rank", "tank", "yank"] },
+  { ending: "ell", words: ["bell", "cell", "dell", "fell", "hell", "jell", "sell", "tell", "well", "yell"] },
+  { ending: "all", words: ["ball", "call", "fall", "gall", "hall", "mall", "tall", "wall"] },
+];
 
 // Speech Synthesis setup
 const synth = window.speechSynthesis;
