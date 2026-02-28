@@ -83,49 +83,49 @@ let currentLanguage = 'en';
         { letter: "Z", word: "zipper" }  
     ]
 
-// // Action Verbs for Word of the Day
-// const actionVerbs = [
-//   { verb: "read", dari: "خواندن", pashto: "لوستل" },
-//   { verb: "write", dari: "نوشتن", pashto: "لیکل" },
-//   { verb: "trace", dari: "پیروی کردن", pashto: "تعقیب کول" },
-//   { verb: "copy", dari: "کپی کردن", pashto: "نقل کول" },
-//   { verb: "draw", dari: "کشیدن", pashto: "تصویر کول" },
-//   { verb: "jump", dari: "پریدن", pashto: "تلانګې کول" },
-//   { verb: "run", dari: "دویدن", pashto: "ګریز کول" },
-//   { verb: "walk", dari: "راه رفتن", pashto: "ګردیدل" },
-//   { verb: "sit", dari: "نشستن", pashto: "کیناستل" },
-//   { verb: "stand", dari: "ایستادن", pashto: "پاڅېدل" },
-//   { verb: "clap", dari: "تصفیق کردن", pashto: "تالیف کول" },
-//   { verb: "sing", dari: "آواز خواندن", pashto: "آهنګ وایل" },
-//   { verb: "dance", dari: "رقص کردن", pashto: "ړقص کول" },
-//   { verb: "paint", dari: "نقاشی کردن", pashto: "رنګول" },
-//   { verb: "count", dari: "شمارش کردن", pashto: "شمیرل" },
-//   { verb: "listen", dari: "گوش دادن", pashto: "اوریدل" },
-//   { verb: "speak", dari: "صحبت کردن", pashto: "خبرې کول" },
-//   { verb: "play", dari: "بازی کردن", pashto: "لوبه کول" },
-//   { verb: "learn", dari: "یادگیری کردن", pashto: "زده کول" },
-//   { verb: "share", dari: "اشتراک کردن", pashto: "ویشل" }
-// ];
+// Action Verbs for Word of the Day
+const actionVerbs = [
+  { verb: "read", dari: "خواندن", pashto: "لوستل" },
+  { verb: "write", dari: "نوشتن", pashto: "لیکل" },
+  { verb: "trace", dari: "پیروی کردن", pashto: "تعقیب کول" },
+  { verb: "copy", dari: "کپی کردن", pashto: "نقل کول" },
+  { verb: "draw", dari: "کشیدن", pashto: "تصویر کول" },
+  { verb: "jump", dari: "پریدن", pashto: "تلانګې کول" },
+  { verb: "run", dari: "دویدن", pashto: "ګریز کول" },
+  { verb: "walk", dari: "راه رفتن", pashto: "ګردیدل" },
+  { verb: "sit", dari: "نشستن", pashto: "کیناستل" },
+  { verb: "stand", dari: "ایستادن", pashto: "پاڅېدل" },
+  { verb: "clap", dari: "تصفیق کردن", pashto: "تالیف کول" },
+  { verb: "sing", dari: "آواز خواندن", pashto: "آهنګ وایل" },
+  { verb: "dance", dari: "رقص کردن", pashto: "ړقص کول" },
+  { verb: "paint", dari: "نقاشی کردن", pashto: "رنګول" },
+  { verb: "count", dari: "شمارش کردن", pashto: "شمیرل" },
+  { verb: "listen", dari: "گوش دادن", pashto: "اوریدل" },
+  { verb: "speak", dari: "صحبت کردن", pashto: "خبرې کول" },
+  { verb: "play", dari: "بازی کردن", pashto: "لوبه کول" },
+  { verb: "learn", dari: "یادگیری کردن", pashto: "زده کول" },
+  { verb: "share", dari: "اشتراک کردن", pashto: "ویشل" }
+];
 
-// // Get Word of the Day function
-// function getWordOfDay() {
-//   const today = new Date();
-//   const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
-//   const index = dayOfYear % actionVerbs.length;
-//   return actionVerbs[index];
-// }
+// Get Word of the Day function
+function getWordOfDay() {
+  const today = new Date();
+  const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+  const index = dayOfYear % actionVerbs.length;
+  return actionVerbs[index];
+}
 
-// // Get DOM elements
-// const lettersContainer = document.getElementById("lettersContainer");
-// const output = document.getElementById("output");
-// const familiesContainer = document.getElementById("familiesContainer");
-// const letterModal = document.getElementById("letterModal");
-// const closeModal = document.getElementById("closeModal");
-// const modalOverlay = document.querySelector(".modal-overlay");
-// const modalLetter = document.getElementById("modalLetter");
-// const modalWord = document.getElementById("modalWord");
-// const modalImage = document.getElementById("modalImage");
-// const speakBtn = document.getElementById("speakBtn");
+// Get DOM elements
+const lettersContainer = document.getElementById("lettersContainer");
+const output = document.getElementById("output");
+const familiesContainer = document.getElementById("familiesContainer");
+const letterModal = document.getElementById("letterModal");
+const closeModal = document.getElementById("closeModal");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalLetter = document.getElementById("modalLetter");
+const modalWord = document.getElementById("modalWord");
+const modalImage = document.getElementById("modalImage");
+const speakBtn = document.getElementById("speakBtn");
 
 // // Word Families Data - 3 to 4 letter words only
 // const wordFamilies = [
@@ -152,9 +152,9 @@ let currentLanguage = 'en';
 //   { ending: "all", words: ["ball", "call", "fall", "gall", "hall", "mall", "tall", "wall"] },
 // ];
 
-// // Speech Synthesis setup
-// const synth = window.speechSynthesis;
-// let currentUtterance = null;
+// Speech Synthesis setup
+const synth = window.speechSynthesis;
+let currentUtterance = null;
 
 // // Function to speak text
 // function speak(text) {
