@@ -156,38 +156,38 @@ const wordFamilies = [
 const synth = window.speechSynthesis;
 let currentUtterance = null;
 
-// // Function to speak text
-// function speak(text) {
-//   // Cancel any ongoing speech
-//   synth.cancel();
-  
-//   currentUtterance = new SpeechSynthesisUtterance(text);
-//   currentUtterance.rate = 0.9;
-//   currentUtterance.pitch = 1.2;
-//   currentUtterance.volume = 1;
-//   currentUtterance.lang = 'en-US';
-  
-//   // Add visual feedback
-//   speakBtn.classList.add("playing");
-  
-//   currentUtterance.onend = () => {
-//     speakBtn.classList.remove("playing");
-//   };
-  
-//   currentUtterance.onerror = () => {
-//     speakBtn.classList.remove("playing");
-//   };
-  
-//   synth.speak(currentUtterance);
-// }
+// Function to speak text
+function speak(text) {
+  // Cancel any ongoing speech
+  synth.cancel();
 
-// // Speak button click handler
-// speakBtn.addEventListener("click", () => {
-//   const letterText = modalLetter.textContent;
-//   const wordText = modalWord.textContent;
-//   const fullText = `${letterText} is for ${wordText}`;
-//   speak(fullText);
-// });
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  currentUtterance.rate = 0.9;
+  currentUtterance.pitch = 1.2;
+  currentUtterance.volume = 1;
+  currentUtterance.lang = 'en-US';
+
+  // Add visual feedback
+  speakBtn.classList.add("playing");
+
+  currentUtterance.onend = () => {
+    speakBtn.classList.remove("playing");
+  };
+
+  currentUtterance.onerror = () => {
+    speakBtn.classList.remove("playing");
+  };
+
+  synth.speak(currentUtterance);
+}
+
+// Speak button click handler
+speakBtn.addEventListener("click", () => {
+  const letterText = modalLetter.textContent;
+  const wordText = modalWord.textContent;
+  const fullText = `${letterText} is for ${wordText}`;
+  speak(fullText);
+});
 
 // // Function to open modal with letter info
 // function openLetterModal(item) {
