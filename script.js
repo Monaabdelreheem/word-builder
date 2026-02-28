@@ -474,61 +474,61 @@ document.addEventListener("click", () => {
   });
 }, false);
 
-// // Language switching functionality
-// function updateLanguage(lang) {
-//   currentLanguage = lang;
+// Language switching functionality
+function updateLanguage(lang) {
+  currentLanguage = lang;
   
-//   // Update header
-//   document.querySelector('.title').textContent = translations[lang].title;
-//   document.querySelector('.subtitle').textContent = translations[lang].subtitle;
+  // Update header
+  document.querySelector('.title').textContent = translations[lang].title;
+  document.querySelector('.subtitle').textContent = translations[lang].subtitle;
   
-//   // Update section titles and descriptions
-//   const sections = document.querySelectorAll('.section');
-//   const titles = ['wordOfDay', 'letterExplorer', 'wordFamilies', 'buildYourWords'];
-//   const descs = [null, 'letterDesc', 'familiesDesc', 'buildDesc'];
+  // Update section titles and descriptions
+  const sections = document.querySelectorAll('.section');
+  const titles = ['wordOfDay', 'letterExplorer', 'wordFamilies', 'buildYourWords'];
+  const descs = [null, 'letterDesc', 'familiesDesc', 'buildDesc'];
   
-//   sections.forEach((section, index) => {
-//     const title = section.querySelector('.section-title');
-//     const desc = section.querySelector('.section-description');
-//     if (title) title.textContent = translations[lang][titles[index]];
-//     if (desc && descs[index]) desc.textContent = translations[lang][descs[index]];
-//   });
+  sections.forEach((section, index) => {
+    const title = section.querySelector('.section-title');
+    const desc = section.querySelector('.section-description');
+    if (title) title.textContent = translations[lang][titles[index]];
+    if (desc && descs[index]) desc.textContent = translations[lang][descs[index]];
+  });
   
-//   // Update input placeholder
-//   const input = document.getElementById('lettersInput');
-//   if (input) input.placeholder = translations[lang].placeholder;
+  // Update input placeholder
+  const input = document.getElementById('lettersInput');
+  if (input) input.placeholder = translations[lang].placeholder;
   
-//   // Update button
-//   const buildBtn = document.getElementById('buildBtn');
-//   if (buildBtn) buildBtn.textContent = translations[lang].buildBtn;
+  // Update button
+  const buildBtn = document.getElementById('buildBtn');
+  if (buildBtn) buildBtn.textContent = translations[lang].buildBtn;
   
-//   // Update language buttons
-//   document.querySelectorAll('.lang-btn').forEach(btn => {
-//     btn.classList.remove('active');
-//   });
-//   document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+  // Update language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
   
-//   // Update modal labels
-//   const wordLabel = document.querySelector('.modal-word-section h3');
-//   if (wordLabel) wordLabel.textContent = translations[lang].word;
+  // Update modal labels
+  const wordLabel = document.querySelector('.modal-word-section h3');
+  if (wordLabel) wordLabel.textContent = translations[lang].word;
   
-//   const speakBtn = document.getElementById('speakBtn');
-//   if (speakBtn) speakBtn.innerHTML = `<span class="speak-icon">🔊</span> ${translations[lang].hearIt}`;
+  const speakBtn = document.getElementById('speakBtn');
+  if (speakBtn) speakBtn.innerHTML = `<span class="speak-icon">🔊</span> ${translations[lang].hearIt}`;
   
-//   const closeBtn = document.querySelector('.btn.btn-secondary');
-//   if (closeBtn) closeBtn.textContent = translations[lang].close;
+  const closeBtn = document.querySelector('.btn.btn-secondary');
+  if (closeBtn) closeBtn.textContent = translations[lang].close;
   
-//   // Update HTML lang attribute
-//   document.documentElement.lang = lang;
-// }
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+}
 
-// // Language button click handlers
-// document.querySelectorAll('.lang-btn').forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     const lang = btn.dataset.lang;
-//     updateLanguage(lang);
-//   });
-// });
+// Language button click handlers
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    updateLanguage(lang);
+  });
+});
 
 // // Initialize Word of the Day
 // function initializeWordOfDay() {
