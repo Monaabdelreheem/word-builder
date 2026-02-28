@@ -402,77 +402,77 @@ if (lettersInput) {
   });
 }
 
-// // Render Word Families
-// function renderWordFamilies() {
-//   familiesContainer.innerHTML = '';
+// Render Word Families
+function renderWordFamilies() {
+  familiesContainer.innerHTML = '';
   
-//   wordFamilies.forEach((family, index) => {
-//     const familyEl = document.createElement("div");
-//     familyEl.className = "word-family";
-//     familyEl.textContent = family.ending;
-//     familyEl.dataset.familyId = index;
+  wordFamilies.forEach((family, index) => {
+    const familyEl = document.createElement("div");
+    familyEl.className = "word-family";
+    familyEl.textContent = family.ending;
+    familyEl.dataset.familyId = index;
     
-//     // Create word list popup
-//     const wordList = document.createElement("div");
-//     wordList.className = "word-family-list";
-//     wordList.dataset.familyId = index;
+    // Create word list popup
+    const wordList = document.createElement("div");
+    wordList.className = "word-family-list";
+    wordList.dataset.familyId = index;
     
-//     const title = document.createElement("p");
-//     title.textContent = `Words ending in "-${family.ending}"`;
-//     wordList.appendChild(title);
+    const title = document.createElement("p");
+    title.textContent = `Words ending in "-${family.ending}"`;
+    wordList.appendChild(title);
     
-//     // Create grid container for words
-//     const wordsContainer = document.createElement("div");
-//     wordsContainer.className = "word-family-words";
+    // Create grid container for words
+    const wordsContainer = document.createElement("div");
+    wordsContainer.className = "word-family-words";
     
-//     family.words.forEach((word) => {
-//       const wordEl = document.createElement("div");
-//       wordEl.className = "word-family-word";
-//       wordEl.textContent = word;
+    family.words.forEach((word) => {
+      const wordEl = document.createElement("div");
+      wordEl.className = "word-family-word";
+      wordEl.textContent = word;
       
-//       // Click handler for words
-//       wordEl.addEventListener("click", (e) => {
-//         e.stopPropagation();
-//         synth.cancel();
-//         const utterance = new SpeechSynthesisUtterance(word);
-//         utterance.rate = 0.9;
-//         utterance.pitch = 1.2;
-//         utterance.lang = 'en-US';
-//         synth.speak(utterance);
-//       }, false);
+      // Click handler for words
+      wordEl.addEventListener("click", (e) => {
+        e.stopPropagation();
+        synth.cancel();
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.rate = 0.9;
+        utterance.pitch = 1.2;
+        utterance.lang = 'en-US';
+        synth.speak(utterance);
+      }, false);
       
-//       wordsContainer.appendChild(wordEl);
-//     });
+      wordsContainer.appendChild(wordEl);
+    });
     
-//     wordList.appendChild(wordsContainer);
+    wordList.appendChild(wordsContainer);
     
-//     // Click handler for card
-//     familyEl.addEventListener("click", (e) => {
-//       e.stopPropagation();
+    // Click handler for card
+    familyEl.addEventListener("click", (e) => {
+      e.stopPropagation();
       
-//       // Close all popups
-//       document.querySelectorAll(".word-family-list.active").forEach((list) => {
-//         list.classList.remove("active");
-//       });
+      // Close all popups
+      document.querySelectorAll(".word-family-list.active").forEach((list) => {
+        list.classList.remove("active");
+      });
       
-//       // Open this one
-//       wordList.classList.add("active");
-//     }, false);
+      // Open this one
+      wordList.classList.add("active");
+    }, false);
     
-//     familiesContainer.appendChild(familyEl);
-//     familiesContainer.appendChild(wordList);
-//   });
-// }
+    familiesContainer.appendChild(familyEl);
+    familiesContainer.appendChild(wordList);
+  });
+}
 
-// // Initialize word families
-// renderWordFamilies();
+// Initialize word families
+renderWordFamilies();
 
-// // Click outside to close
-// document.addEventListener("click", () => {
-//   document.querySelectorAll(".word-family-list.active").forEach((list) => {
-//     list.classList.remove("active");
-//   });
-// }, false);
+// Click outside to close
+document.addEventListener("click", () => {
+  document.querySelectorAll(".word-family-list.active").forEach((list) => {
+    list.classList.remove("active");
+  });
+}, false);
 
 // // Language switching functionality
 // function updateLanguage(lang) {
