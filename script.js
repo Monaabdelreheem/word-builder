@@ -530,27 +530,27 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   });
 });
 
-// // Initialize Word of the Day
-// function initializeWordOfDay() {
-//   const wordOfDay = { verb: "read", dari: "خواندن", pashto: "لوستل" };
-//   const verbElement = document.getElementById('wordOfDayVerb');
-//   const defElement = document.getElementById('wordOfDayDef');
-//   const speakBtn = document.getElementById('wordOfDaySpeakBtn');
-  
-//   if (verbElement) verbElement.textContent = wordOfDay.verb;
-//   if (defElement) defElement.innerHTML = `<div style="margin: 8px 0;"><strong>دری:</strong> ${wordOfDay.dari}</div><div><strong>پشتو:</strong> ${wordOfDay.pashto}</div>`;
-  
-//   if (speakBtn) {
-//     speakBtn.addEventListener('click', () => {
-//       synth.cancel();
-//       const utterance = new SpeechSynthesisUtterance(wordOfDay.verb);
-//       utterance.rate = 0.9;
-//       utterance.pitch = 1.2;
-//       utterance.lang = 'en-US';
-//       synth.speak(utterance);
-//     });
-//   }
-// }
+// Initialize Word of the Day
+function initializeWordOfDay() {
+  const wordOfDay = { verb: "read", dari: "خواندن", pashto: "لوستل" };
+  const verbElement = document.getElementById('wordOfDayVerb');
+  const defElement = document.getElementById('wordOfDayDef');
+  const speakBtn = document.getElementById('wordOfDaySpeakBtn');
 
-// // Call initialization on page load
-// window.addEventListener('DOMContentLoaded', initializeWordOfDay);
+  if (verbElement) verbElement.textContent = wordOfDay.verb;
+  if (defElement) defElement.innerHTML = `<div style="margin: 8px 0;"><strong>دری:</strong> ${wordOfDay.dari}</div><div><strong>پشتو:</strong> ${wordOfDay.pashto}</div>`;
+
+  if (speakBtn) {
+    speakBtn.addEventListener('click', () => {
+      synth.cancel();
+      const utterance = new SpeechSynthesisUtterance(wordOfDay.verb);
+      utterance.rate = 0.9;
+      utterance.pitch = 1.2;
+      utterance.lang = 'en-US';
+      synth.speak(utterance);
+    });
+  }
+}
+
+// Call initialization on page load
+window.addEventListener('DOMContentLoaded', initializeWordOfDay);
