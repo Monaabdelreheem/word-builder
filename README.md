@@ -17,7 +17,7 @@ early reading skills through building simple CVC words and word families.
 ## Status 🚧
 This project is a work in progress and is updated incrementally as part of
 daily coding practice.
-
+ 
 ## Day 2 Plan 🗓️
 - Add input fields for letters
 - Add a button to generate words
