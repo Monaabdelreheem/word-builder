@@ -421,3 +421,15 @@ body {
     min-width: 0;
   }
 }
+
+.modal-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0;
+}

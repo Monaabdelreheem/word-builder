@@ -52,6 +52,7 @@ const translations = {
 };
 
 let currentLanguage = 'en';
+let currentWordOfDay = null;
 
  // Data structure for letters and corresponding words
  const lettersData = [
@@ -221,6 +222,10 @@ function closeLetterModal() {
 // Close modal when clicking close button or overlay
 closeModal.addEventListener("click", closeLetterModal);
 modalOverlay.addEventListener("click", closeLetterModal);
+
+// Secondary "Close" button inside modal body
+const closeModalSecondary = document.querySelector(".btn.btn-secondary");
+if (closeModalSecondary) closeModalSecondary.addEventListener("click", closeLetterModal);
 
 // Close modal on Escape key
 document.addEventListener("keydown", (e) => {
@@ -518,6 +523,16 @@ function updateLanguage(lang) {
   const closeBtn = document.querySelector('.btn.btn-secondary');
   if (closeBtn) closeBtn.textContent = translations[lang].close;
   
+  // Update Word of the Day verb display
+  if (currentWordOfDay) {
+    const verbEl = document.getElementById('wordOfDayVerb');
+    if (verbEl) {
+      if (lang === 'en') verbEl.textContent = currentWordOfDay.verb;
+      else if (lang === 'dari') verbEl.textContent = currentWordOfDay.dari;
+      else if (lang === 'pashto') verbEl.textContent = currentWordOfDay.pashto;
+    }
+  }
+
   // Update HTML lang attribute
   document.documentElement.lang = lang;
 }
@@ -532,18 +547,18 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 // Initialize Word of the Day
 function initializeWordOfDay() {
-  const wordOfDay = { verb: "read", dari: "خواندن", pashto: "لوستل" };
+  currentWordOfDay = getWordOfDay();
   const verbElement = document.getElementById('wordOfDayVerb');
   const defElement = document.getElementById('wordOfDayDef');
   const speakBtn = document.getElementById('wordOfDaySpeakBtn');
 
-  if (verbElement) verbElement.textContent = wordOfDay.verb;
-  if (defElement) defElement.innerHTML = `<div style="margin: 8px 0;"><strong>دری:</strong> ${wordOfDay.dari}</div><div><strong>پشتو:</strong> ${wordOfDay.pashto}</div>`;
+  if (verbElement) verbElement.textContent = currentWordOfDay.verb;
+  if (defElement) defElement.innerHTML = `<div style="margin: 8px 0;"><strong>دری:</strong> ${currentWordOfDay.dari}</div><div><strong>پشتو:</strong> ${currentWordOfDay.pashto}</div>`;
 
   if (speakBtn) {
     speakBtn.addEventListener('click', () => {
       synth.cancel();
-      const utterance = new SpeechSynthesisUtterance(wordOfDay.verb);
+      const utterance = new SpeechSynthesisUtterance(currentWordOfDay.verb);
       utterance.rate = 0.9;
       utterance.pitch = 1.2;
       utterance.lang = 'en-US';
