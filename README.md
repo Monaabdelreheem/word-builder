@@ -23,3 +23,5 @@ daily coding practice.
 - Add a button to generate words
 - Start JavaScript logic for building CVC words
 
+
+Graph verification update: profile attribution check commit.
