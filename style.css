@@ -148,7 +148,7 @@ body {
 }
 
 .word-of-day-card {
-  background: linear-gradient(135deg, #be4f85 0%, #8f3f7a 100%);
+  background: linear-gradient(135deg, #7dff7a 0%, #b6ff6a 100%);
   border-radius: 14px;
   padding: 22px 20px;
   text-align: center;
@@ -156,16 +156,17 @@ body {
 }
 
 .word-of-day-verb {
-  font-size: clamp(1.8rem, 6vw, 2.8rem);
-  font-weight: 800;
+  font-size: clamp(2.2rem, 7vw, 3.3rem);
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .word-of-day-definition {
-  margin: 10px 0 16px;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  margin: 12px 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  opacity: 1;
 }
 
 /* Letters grid */
